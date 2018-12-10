@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Pagination = props => {
 	const { currentPage, numberOfPages, pageChange } = props;
 	return (
-		<nav>
+		<nav className="ui segment menu bottom fixed">
 			<div className="four ui buttons">
 				<button className={`ui left labeled icon button ${currentPage === 1 ? 'disabled' : ''}`} onClick={ () => pageChange(1) }>First<i className="angle double left icon"></i></button>
 				<button className={`ui left labeled icon button ${currentPage === 1 ? 'disabled' : ''}`} onClick={ () => pageChange(currentPage - 1) } >Prev<i className="chevron left icon"></i></button>
